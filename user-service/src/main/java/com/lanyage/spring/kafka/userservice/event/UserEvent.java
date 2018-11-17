@@ -19,6 +19,7 @@ public class UserEvent extends RemoteApplicationEvent {
 
     public UserEvent(Object source, String originService, String destinationService, String action, String id) {
         super(source, originService, destinationService);
+        logger.info("==> User Event {},{},{} <==", source, originService, destinationService);
         this.action = action;
         this.uniqueKey = id;
     }

@@ -9,7 +9,7 @@ import org.springframework.cloud.stream.messaging.Source;
 
 @SpringBootApplication
 @EnableDiscoveryClient
-@RemoteApplicationEventScan
+@RemoteApplicationEventScan(basePackages = "com.lanyage.spring.kafka.userservice.event")
 public class UserServiceApplication {
 
     public static void main(String[] args) {

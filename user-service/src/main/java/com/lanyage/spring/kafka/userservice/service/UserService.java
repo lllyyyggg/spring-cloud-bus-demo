@@ -50,6 +50,7 @@ public class UserService {
     }
 
     private void fireEvent(String eventAction, User user) {
+        logger.info("==> context:{} <==",holder.getApplicationContext().getId());
         UserEvent userEvent = new UserEvent(user,   //源对象
                 holder.getApplicationContext().getId(), //上下文ID
                 "*:**", //将消息发往所有服务
